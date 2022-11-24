@@ -1,30 +1,52 @@
 import "./style.css";
 
-const two = document.querySelector(".second-part-of-description-header");
-const three = document.querySelector(".third-part-of-description-header");
-const fourth = document.querySelector(".fourth-part-of-description-header");
-const anim = document.querySelectorAll(".container-first-part");
+const firstPartHeader = document.querySelector(
+  ".first-part-of-description-header"
+);
+const secondPartHeader = document.querySelector(
+  ".second-part-of-description-header"
+);
+const thirdPartHeader = document.querySelector(
+  ".third-part-of-description-header"
+);
+const fourthPartHeader = document.querySelector(
+  ".fourth-part-of-description-header"
+);
 
-two.addEventListener("mouseover", () => {
-  anim[0].style.opacity = "0";
+secondPartHeader.addEventListener("mouseover", () => {
+  firstPartHeader.style.zIndex = "-5";
+
+  secondPartHeader.style.zIndex = "100";
 });
 
-two.addEventListener("mouseout", () => {
-  anim[0].style.opacity = "1";
+secondPartHeader.addEventListener("mouseout", () => {
+  firstPartHeader.style.zIndex = "50";
+
+  secondPartHeader.style.zIndex = "40";
 });
 
-three.addEventListener("mouseover", () => {
-  anim[0].style.opacity = "0";
+thirdPartHeader.addEventListener("mouseover", () => {
+  firstPartHeader.style.zIndex = "-5";
+  secondPartHeader.style.zIndex = "-6";
+  thirdPartHeader.style.zIndex = "100";
 });
 
-three.addEventListener("mouseout", () => {
-  anim[0].style.opacity = "1";
+thirdPartHeader.addEventListener("mouseout", () => {
+  firstPartHeader.style.zIndex = "50";
+  secondPartHeader.style.zIndex = "40";
+  thirdPartHeader.style.zIndex = "30";
 });
 
-fourth.addEventListener("mouseover", () => {
-  anim[0].style.opacity = "0";
+fourthPartHeader.addEventListener("mouseover", () => {
+  firstPartHeader.style.zIndex = "-1";
+  secondPartHeader.style.zIndex = "-2";
+  thirdPartHeader.style.zIndex = "-3";
+  fourthPartHeader.style.zIndex = "100";
 });
 
-fourth.addEventListener("mouseout", () => {
-  anim[0].style.opacity = "1";
+fourthPartHeader.addEventListener("mouseout", () => {
+  firstPartHeader.style.zIndex = "50";
+  secondPartHeader.style.zIndex = "40";
+  thirdPartHeader.style.zIndex = "30";
+  fourthPartHeader.style.zIndex = "20";
 });
